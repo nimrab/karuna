@@ -1,0 +1,22 @@
+.button {
+  width: 256px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #FFDD3C;
+  display: flex;
+  align-items: center; }
+  .button:hover {
+    cursor: pointer;
+    background-color: #E7C008; }
+  .button:active {
+    background-color: #FFDD3C; }
+  .button .button_text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    margin-left: 64px; }
+  .button .arrow_img {
+    margin-left: 11px;
+    margin-top: 2px; }
+
+/*# sourceMappingURL=NextButton.module.css.map */

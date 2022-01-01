@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import css from './App.module.scss'
+import {StartScreen} from "./components/StartScreen/StartScreen";
+import {SurveyScreen} from "./components/SurveyScreen/SurveyScreen";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export function App() {
+    return (
+        <div className={css.app}>
+
+            <StartScreen/>
+            <SurveyScreen/>
+
+
+        </div>
+    )
 }
 
-export default App;
+

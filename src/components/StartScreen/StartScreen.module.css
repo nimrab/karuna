@@ -1,0 +1,50 @@
+.main_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  .main_box .left_box {
+    margin-top: 120px;
+    margin-right: 82px;
+    flex-direction: column;
+    margin-left: 48px; }
+    .main_box .left_box .info_link {
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #487BFE;
+      font-weight: 600;
+      letter-spacing: 4px;
+      display: flex;
+      align-items: center;
+      line-height: 150%; }
+    .main_box .left_box .header_text {
+      font-weight: 700;
+      font-size: 48px;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      line-height: 130%;
+      margin-top: 16px; }
+    .main_box .left_box .text_level_1, .main_box .left_box .text_level_2, .main_box .left_box .text_level_3 {
+      display: block;
+      font-weight: 600;
+      font-size: 16px;
+      margin-block-start: 0;
+      margin-block-end: 0; }
+    .main_box .left_box .text_level_1 {
+      margin-top: 16px;
+      margin-bottom: 8px;
+      line-height: 150%; }
+    .main_box .left_box .text_level_3 {
+      margin-top: 8px; }
+    .main_box .left_box .button_wrapper {
+      margin-top: 48px; }
+    .main_box .left_box .like_wrapper {
+      margin-top: 52px;
+      margin-bottom: 53px; }
+  .main_box .right_box {
+    margin-right: 48px;
+    margin-top: 111px; }
+    .main_box .right_box .img {
+      width: 544px;
+      height: 394px; }
+
+/*# sourceMappingURL=StartScreen.module.css.map */

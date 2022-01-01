@@ -1,0 +1,13 @@
+.like_box {
+  display: flex;
+  align-items: center; }
+  .like_box:hover {
+    cursor: pointer; }
+  .like_box .like_text {
+    margin-left: 21px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #616368; }
+
+/*# sourceMappingURL=LikeButton.module.css.map */
