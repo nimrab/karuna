@@ -7,6 +7,17 @@ import {LikeButton} from "../LikeButton/LikeButton";
 export const SurveyScreen = () => {
     return (
         <section className={css.survey_box}>
+
+
+            <figure className={css.survey_css_img}>
+
+                <div className={css.triangle_top}></div>
+                <div className={css.triangle_middle}></div>
+                <div className={css.triangle_bottom}></div>
+
+            </figure>
+
+
             <span className={css.survey_counter}>1/8</span>
             <h1 className={css.header_question}>
                 What is the

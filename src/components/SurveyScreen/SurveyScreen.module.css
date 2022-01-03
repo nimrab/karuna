@@ -1,7 +1,42 @@
 .survey_box {
   margin-top: 120px;
   margin-left: 48px;
-  width: 864px; }
+  width: 864px;
+  border: 1px solid #000;
+  position: relative; }
+  .survey_box .survey_css_img {
+    border: 1px solid #FD003B56;
+    position: absolute;
+    width: 250px;
+    height: 340px;
+    right: -94px;
+    top: -65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotate(-22.29deg); }
+    .survey_box .survey_css_img .triangle_top {
+      width: 0;
+      height: 0;
+      border-left: 92px solid transparent;
+      border-right: 92px solid transparent;
+      border-bottom: 132px solid #FFDD3C;
+      margin-bottom: -45px; }
+    .survey_box .survey_css_img .triangle_middle {
+      width: 0;
+      height: 0;
+      border-left: 106px solid transparent;
+      border-right: 106px solid transparent;
+      border-bottom: 148px solid #FFDD3C;
+      top: 90px;
+      margin-bottom: -70px; }
+    .survey_box .survey_css_img .triangle_bottom {
+      width: 0;
+      height: 0;
+      border-left: 118px solid transparent;
+      border-right: 118px solid transparent;
+      border-bottom: 168px solid #FFDD3C;
+      top: 180px; }
   .survey_box .survey_counter {
     font-weight: 500;
     font-size: 16px;
@@ -13,7 +48,9 @@
     line-height: 120%;
     margin-block-start: 0;
     margin-block-end: 0;
-    margin-top: 16px; }
+    margin-top: 16px;
+    position: relative;
+    z-index: 99; }
   .survey_box .header_color_text {
     color: #487BFE; }
   .survey_box .survey_counter {
@@ -22,7 +59,9 @@
     line-height: 150%;
     color: #2A2B30; }
   .survey_box .choose_option_box {
-    margin-top: 52px; }
+    margin-top: 52px;
+    position: relative;
+    z-index: 99; }
     .survey_box .choose_option_box .choose_option {
       display: block;
       border-radius: 8px;

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAY;EACV,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,MAAM,EAAE,cAAc;;AAGxB,SAAU;EACR,UAAU,EAAE,IAAI;EAChB,WAAW,EAAE,IAAI;EACjB,MAAM,EAAE,cAAc",
+"sources": ["ResultScreen.module.scss"],
+"names": [],
+"file": "ResultScreen.module.css"
+}
