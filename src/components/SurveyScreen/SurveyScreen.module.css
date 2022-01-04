@@ -74,6 +74,14 @@
       align-items: center;
       padding-left: 32px;
       margin-top: 16px; }
+      .survey_box .choose_option_box .choose_option:hover {
+        cursor: pointer; }
+    .survey_box .choose_option_box .choose_bg {
+      background-color: #F7F7F9; }
+    .survey_box .choose_option_box .choose_bd_green {
+      border: 2px solid green; }
+    .survey_box .choose_option_box .choose_bd_red {
+      border: 2px solid red; }
   .survey_box .button_wrapper {
     margin-top: 68px; }
   .survey_box .like_wrapper {

@@ -1,5 +1,4 @@
 .button {
-  width: 256px;
   height: 48px;
   border-radius: 8px;
   background-color: #FFDD3C;
@@ -22,8 +21,28 @@
     margin-left: 64px;
   }
 
-  .arrow_img {
-    margin-left: 11px;
-    margin-top: 2px;
-  }
+
+}
+
+
+.arrow_img {
+  margin-left: 11px;
+  margin-top: 2px;
+}
+
+.button_disabled {
+  height: 48px;
+  border-radius: 8px;
+  background-color: #3F4044;
+  display: flex;
+  align-items: center;
+}
+
+.button_text_disabled {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 130%;
+  margin-left: 64px;
+  color: #616368;
+  margin-right: 3px;
 }

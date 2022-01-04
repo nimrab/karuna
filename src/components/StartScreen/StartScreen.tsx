@@ -3,8 +3,20 @@ import css from './StartScreen.module.scss'
 import startLogoImg from '../../assets/img/729205330_1.png'
 import {NextButton} from '../NextButton/NextButton'
 import {LikeButton} from '../LikeButton/LikeButton'
+import {useDispatch, useSelector} from "react-redux";
+import {changeSurveyItem, InitialStateType} from "../../store/surveyReducer";
+import {rootReducerType} from "../../store/store";
 
 export const StartScreen = () => {
+
+    const state = useSelector<rootReducerType, InitialStateType>(state => state.survey)
+    const dispatch = useDispatch()
+
+    const changeItem = () => {
+        dispatch(changeSurveyItem(state.currentSurveyItem + 1))
+    }
+
+
     return (
         <section className={css.main_box}>
 
@@ -18,7 +30,12 @@ export const StartScreen = () => {
                     defining the volume of trading knowledge. Do you want to learn your level?</p>
                 <p className={css.text_level_3}>Let’s go!</p>
                 <div className={css.button_wrapper}>
-                    <NextButton text={'Let’s go!'} width={'256px'}/>
+                    <NextButton
+                        text={'Let’s go!'}
+                        width={'256px'}
+                        buttonCallback={changeItem}
+                        isDisabled={false}
+                    />
                 </div>
 
                 <div className={css.like_wrapper}>

@@ -94,8 +94,23 @@
       align-items: center;
       padding-left: 32px;
       margin-top: 16px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
+    .choose_bg {
+      background-color: #F7F7F9;
+    }
+
+    .choose_bd_green {
+      border: 2px solid green;
+    }
+
+    .choose_bd_red {
+      border: 2px solid red;
+    }
   }
 
   .button_wrapper {

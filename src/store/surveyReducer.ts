@@ -9,7 +9,9 @@ export type InitialStateType = {
 
 type SurveyQuestionsItemType = {
     id: number
-    question: string
+    question_sub_1: string
+    question_color: string
+    question_sub_2: string
 }
 type SurveyAnswerItemType = {
     id: number
@@ -20,9 +22,10 @@ type ActionType =
     changeSurveyItemType
     | switchSetAnswerType
     | changeCorrectAnswerCountType
+    | changeIsChosenAnswerType
 
 
-type AnswerItemType = {
+export type AnswerItemType = {
     id: number
     answer: string
     isCorrect: boolean
@@ -34,18 +37,32 @@ const initialState = {
     surveyQuestions: [
         {
             id: 1,
-            question: 'What is the recommended amount of one trade, according to the basic rule of money management?'
+            question_sub_1: 'What is the',
+            question_color: 'recommended amount of one trade',
+            question_sub_2: ', according to the basic rule of money management?'
         },
-        {id: 2, question: 'What is the recommended amount of trades, according to the money management rule?'},
-        {id: 3, question: 'What is asset profitability?'},
+        {
+            id: 2,
+            question_sub_1: 'What is the ',
+            question_color: 'recommended amount of trades',
+            question_sub_2: ', according to the money management rule?'
+        },
+        {
+            id: 3,
+            question_sub_1: 'What is ',
+            question_color: 'asset profitability?',
+            question_sub_2: ''
+        },
         {
             id: 4,
-            question: 'You’ve concluded a $100 trade. The asset profitability is 80%. How many funds will you receive in the case of the correct price forecast?'
+            question_sub_1: 'You’ve concluded a $100 trade. The asset profitability is 80%. How many funds will you receive in the case of the correct price forecast?',
+            question_color: '',
+            question_sub_2: ''
         },
-        {id: 5, question: 'Your deposit amount is $800. How many funds can you safely invest at the same time?'},
-        {id: 6, question: 'What is the difference between the asset and the index?'},
-        {id: 7, question: 'What does the EUR/USD value mean?'},
-        {id: 8, question: 'What does the index value tell you?'},
+        /*   {id: 5, question: 'Your deposit amount is $800. How many funds can you safely invest at the same time?'},
+           {id: 6, question: 'What is the difference between the asset and the index?'},
+           {id: 7, question: 'What does the EUR/USD value mean?'},
+           {id: 8, question: 'What does the index value tell you?'},*/
     ],
     surveyAnswers: [
         {
@@ -162,6 +179,21 @@ export const surveyReducer = (state: InitialStateType = initialState, action: Ac
                 ...state,
                 correctAnswerCount: action.value
             }
+        case 'CHANGE-IS-CHOSEN-ANSWER':
+            return  {
+                ...state,
+                surveyAnswers: state.surveyAnswers.map(el => {
+                    if (el.id === action.idSurvey) {
+                        return (
+                            {...el,
+                            answers: el.answers.map(elem => elem.id === action.idAnswer ? {...elem, isChosen: action.value} : elem)}
+                        )
+                    } else {
+                        return el
+                    }
+                })
+
+            }
 
         default:
             return state
@@ -171,6 +203,7 @@ export const surveyReducer = (state: InitialStateType = initialState, action: Ac
 type changeSurveyItemType = ReturnType<typeof changeSurveyItem>
 type switchSetAnswerType = ReturnType<typeof switchSetAnswer>
 type changeCorrectAnswerCountType = ReturnType<typeof changeCorrectAnswerCount>
+type changeIsChosenAnswerType = ReturnType<typeof changeIsChosenAnswer>
 
 export const changeSurveyItem = (value: number) => {
     return {
@@ -188,5 +221,14 @@ export const changeCorrectAnswerCount = (value: number) => {
     return {
         type: 'CHANGE-CORRECT-ANSWER-COUNT',
         value
-    }  as const
+    } as const
 }
+export const changeIsChosenAnswer = (idSurvey: number, idAnswer: number, value: boolean) => {
+    return {
+        type: 'CHANGE-IS-CHOSEN-ANSWER',
+        idSurvey,
+        idAnswer,
+        value
+    } as const
+}
+

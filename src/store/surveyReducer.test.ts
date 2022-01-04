@@ -3,7 +3,7 @@ import {
     changeSurveyItem,
     switchSetAnswer,
     changeCorrectAnswerCount,
-    InitialStateType
+    InitialStateType, changeIsChosenAnswer
 } from "./surveyReducer";
 
 
@@ -15,7 +15,9 @@ beforeEach(() => {
         surveyQuestions: [
             {
                 id: 1,
-                question: 'What is the recommended amount of one trade, according to the basic rule of money management?'
+                question_sub_1: 'What is the recommended amount of one trade, according to the basic rule of money management?',
+                question_color: '',
+                question_sub_2: ''
             }
         ],
         surveyAnswers: [
@@ -56,5 +58,14 @@ test('correct answer count should be changed', () => {
     const endState = surveyReducer(startState, action)
 
     expect(endState.correctAnswerCount).toBe(4)
+
+})
+test('isChosen answer should change the value', () => {
+
+    const action = changeIsChosenAnswer(1, 1,true)
+    const endState = surveyReducer(startState, action)
+
+    expect(endState.surveyAnswers[0].answers[0].isChosen).toBe(true)
+    expect(endState.surveyAnswers[0].answers[1].isChosen).toBe(false)
 
 })

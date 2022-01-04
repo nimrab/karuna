@@ -2,8 +2,12 @@ import React from 'react';
 import css from './ResultScreen.module.scss'
 import {LikeButton} from "../LikeButton/LikeButton";
 import resultLogoImg from '../../assets/img/729205330_2.png'
+import {useSelector} from "react-redux";
+import {rootReducerType} from "../../store/store";
+import {InitialStateType} from "../../store/surveyReducer";
 
 export const ResultScreen = () => {
+    const state = useSelector<rootReducerType, InitialStateType>(state => state.survey)
     return (
         <section className={css.result_box}>
 
@@ -11,7 +15,9 @@ export const ResultScreen = () => {
             <div className={css.left_box}>
 
                 <article className={css.left_box_text}>
-                    <h1 className={css.result_header_text}>3/8 Not bad</h1>
+                    <h1 className={css.result_header_text}>
+                        {state.correctAnswerCount}/{state.surveyQuestions.length} Not bad
+                    </h1>
                     <p className={css.text_level_1}>The result is not very high, but you can easily improve it — read
                         our articles and practice.
                     </p>
