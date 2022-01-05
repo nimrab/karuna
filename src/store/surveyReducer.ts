@@ -7,24 +7,18 @@ export type InitialStateType = {
 
 }
 
-type SurveyQuestionsItemType = {
+export type SurveyQuestionsItemType = {
     id: number
-    question_sub_1: string
-    question_color: string
-    question_sub_2: string
+    q_sub_1: string
+    q_sub_2: string
+    q_sub_3: string
+    q_sub_4: string
+    q_sub_5: string
 }
 type SurveyAnswerItemType = {
     id: number
     answers: Array<AnswerItemType>
 }
-
-type ActionType =
-    changeSurveyItemType
-    | switchSetAnswerType
-    | changeCorrectAnswerCountType
-    | changeIsChosenAnswerType
-
-
 export type AnswerItemType = {
     id: number
     answer: string
@@ -32,37 +26,80 @@ export type AnswerItemType = {
     isChosen: boolean
 }
 
+
+type ActionType =
+    changeSurveyItemType
+    | switchSetAnswerType
+    | changeCorrectAnswerCountType
+    | changeIsChosenAnswerType
+
 const initialState = {
 
     surveyQuestions: [
         {
             id: 1,
-            question_sub_1: 'What is the',
-            question_color: 'recommended amount of one trade',
-            question_sub_2: ', according to the basic rule of money management?'
+            q_sub_1: 'What is the',
+            q_sub_2: 'recommended amount of one trade',
+            q_sub_3: ', according to the basic rule of money management?',
+            q_sub_4: '',
+            q_sub_5: '',
         },
         {
             id: 2,
-            question_sub_1: 'What is the ',
-            question_color: 'recommended amount of trades',
-            question_sub_2: ', according to the money management rule?'
+            q_sub_1: 'What is the ',
+            q_sub_2: 'recommended amount of trades',
+            q_sub_3: ', according to the money management rule?',
+            q_sub_4: '',
+            q_sub_5: '',
         },
         {
             id: 3,
-            question_sub_1: 'What is ',
-            question_color: 'asset profitability?',
-            question_sub_2: ''
+            q_sub_1: 'What is ',
+            q_sub_2: 'asset profitability?',
+            q_sub_3: '',
+            q_sub_4: '',
+            q_sub_5: '',
         },
         {
             id: 4,
-            question_sub_1: 'You’ve concluded a $100 trade. The asset profitability is 80%. How many funds will you receive in the case of the correct price forecast?',
-            question_color: '',
-            question_sub_2: ''
+            q_sub_1: 'You’ve concluded a $100 trade. The asset profitability is 80%. ',
+            q_sub_2: 'How many funds ',
+            q_sub_3: 'will you receive in the case of the ',
+            q_sub_4: 'correct price forecast',
+            q_sub_5: '?',
         },
-        /*   {id: 5, question: 'Your deposit amount is $800. How many funds can you safely invest at the same time?'},
-           {id: 6, question: 'What is the difference between the asset and the index?'},
-           {id: 7, question: 'What does the EUR/USD value mean?'},
-           {id: 8, question: 'What does the index value tell you?'},*/
+        {
+            id: 5,
+            q_sub_1: 'Your deposit amount is $800. ',
+            q_sub_2: 'How many funds ',
+            q_sub_3: 'can you safely invest at the same time?',
+            q_sub_4: '',
+            q_sub_5: '',
+        },
+        {
+            id: 6,
+            q_sub_1: 'What is the difference between the ',
+            q_sub_2: 'asset ',
+            q_sub_3: 'and the ',
+            q_sub_4: 'index?',
+            q_sub_5: '',
+        },
+        {
+            id: 7,
+            q_sub_1: 'What does the ',
+            q_sub_2: 'EUR/USD value ',
+            q_sub_3: 'mean?',
+            q_sub_4: '',
+            q_sub_5: '',
+        },
+        {
+            id: 8,
+            q_sub_1: 'What does the ',
+            q_sub_2: 'index value ',
+            q_sub_3: 'tell you?',
+            q_sub_4: '',
+            q_sub_5: '',
+        },
     ],
     surveyAnswers: [
         {
@@ -180,13 +217,18 @@ export const surveyReducer = (state: InitialStateType = initialState, action: Ac
                 correctAnswerCount: action.value
             }
         case 'CHANGE-IS-CHOSEN-ANSWER':
-            return  {
+            return {
                 ...state,
                 surveyAnswers: state.surveyAnswers.map(el => {
                     if (el.id === action.idSurvey) {
                         return (
-                            {...el,
-                            answers: el.answers.map(elem => elem.id === action.idAnswer ? {...elem, isChosen: action.value} : elem)}
+                            {
+                                ...el,
+                                answers: el.answers.map(elem => elem.id === action.idAnswer ? {
+                                    ...elem,
+                                    isChosen: action.value
+                                } : elem)
+                            }
                         )
                     } else {
                         return el

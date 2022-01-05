@@ -1,0 +1,28 @@
+.choose_option {
+  border-radius: 8px;
+  border: 2px solid #B4B5B7;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 600;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  padding-left: 32px;
+  margin-top: 16px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.choose_bg {
+  background-color: #F7F7F9;
+}
+
+.choose_bd_green {
+  border: 2px solid green;
+}
+
+.choose_bd_red {
+  border: 2px solid red;
+}

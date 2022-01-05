@@ -15,9 +15,11 @@ beforeEach(() => {
         surveyQuestions: [
             {
                 id: 1,
-                question_sub_1: 'What is the recommended amount of one trade, according to the basic rule of money management?',
-                question_color: '',
-                question_sub_2: ''
+                q_sub_1: 'What is the',
+                q_sub_2: 'recommended amount of one trade',
+                q_sub_3: ', according to the basic rule of money management?',
+                q_sub_4: '',
+                q_sub_5: '',
             }
         ],
         surveyAnswers: [

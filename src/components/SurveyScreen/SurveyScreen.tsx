@@ -11,6 +11,8 @@ import {
     InitialStateType,
     switchSetAnswer
 } from "../../store/surveyReducer";
+import {OptionBox} from "./OptionBox/OptionBox";
+import {HeaderQuestion} from "./HeaderQuestion/HeaderQuestion";
 
 
 export const SurveyScreen = () => {
@@ -46,7 +48,6 @@ export const SurveyScreen = () => {
     return (
         <section className={css.survey_box}>
 
-
             <figure className={css.survey_css_img}>
                 <div className={css.triangle_top}></div>
                 <div className={css.triangle_middle}></div>
@@ -55,29 +56,22 @@ export const SurveyScreen = () => {
 
 
             <span className={css.survey_counter}>{state.currentSurveyItem}/{state.surveyQuestions.length}</span>
-            <h1 className={css.header_question}>
-                {question!.question_sub_1}
-                <span className={css.header_color_text}>{question!.question_color}</span>
-                {question!.question_sub_2}
-            </h1>
+
+            {question ? <HeaderQuestion question={question} /> : null}
+
 
             <div className={css.choose_option_box}>
                 {answersArr.map(el => {
                     return (
-                        <span
+
+                        <OptionBox
                             key={el.id}
-                            className={`
-                               ${css.choose_option} 
-                               ${el.isChosen ? css.choose_bg : ''} 
-                               ${state.answerIsSet && el.isCorrect ? css.choose_bd_green : ''} 
-                               ${el.isChosen && !el.isCorrect ? css.choose_bd_red : ''}`
-                            }
-                            onClick={() => chooseOption(el)}
-                        >{el.answer}</span>
+                            el={el}
+                            answerIsSet={state.answerIsSet}
+                            chooseOption={chooseOption}
+                        />
                     )
                 })}
-
-
             </div>
 
             <div className={css.button_wrapper}>
