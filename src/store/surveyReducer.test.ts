@@ -32,6 +32,15 @@ beforeEach(() => {
                 ]
             }
         ],
+        resultData: [
+            {
+                id: 1,
+                headerText: 'Not bad',
+                r_sub_1: 'The result is not very high, but you can easily improve it — read our articles and practice',
+                r_sub_2: 'We wish you productive trading!',
+                r_sub_3: 'We wish you productive trading!',
+            }
+            ],
         currentSurveyItem: 0,
         answerIsSet: false,
         correctAnswerCount: 0

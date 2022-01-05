@@ -20,7 +20,16 @@ export function App() {
         }
 
         if (state.currentSurveyItem > state.surveyQuestions.length) {
-            return <ResultScreen/>
+            const result = state.correctAnswerCount / state.surveyQuestions.length
+            const NotBad = result < 6
+            const WellDone = result < 6
+            const Excellent = result < 6
+
+
+            return <ResultScreen
+                result={result}
+
+            />
         }
 
         return  <SurveyScreen/>

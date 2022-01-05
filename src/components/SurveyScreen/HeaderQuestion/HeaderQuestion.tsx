@@ -1,5 +1,5 @@
 import React from 'react';
-import css from "../SurveyScreen.module.scss";
+import css from './HeaderQuestion.module.scss';
 import {SurveyQuestionsItemType} from "../../../store/surveyReducer";
 
 type HeaderQuestionPropsType = {

@@ -1,12 +1,19 @@
 export type InitialStateType = {
     surveyQuestions: Array<SurveyQuestionsItemType>
     surveyAnswers: Array<SurveyAnswerItemType>
+    resultData: Array<ResultItemType>
     answerIsSet: boolean
     currentSurveyItem: number
     correctAnswerCount: number
-
 }
 
+type ResultItemType = {
+    id:number
+    headerText: string
+    r_sub_1: string
+    r_sub_2: string
+    r_sub_3: string
+}
 export type SurveyQuestionsItemType = {
     id: number
     q_sub_1: string
@@ -190,6 +197,29 @@ const initialState = {
                 {id: 2, answer: 'That the specific industry is doing well or not.', isCorrect: true, isChosen: false},
                 {id: 3, answer: 'Both variants may be correct.', isCorrect: false, isChosen: false},
             ]
+        },
+    ],
+    resultData: [
+        {
+            id: 1,
+            headerText: 'Not bad',
+            r_sub_1: 'The result is not very high, but you can easily improve it — read our articles and practice',
+            r_sub_2: 'We wish you productive trading!',
+            r_sub_3: 'We wish you productive trading!',
+        },
+        {
+            id: 2,
+            headerText: 'Well done',
+            r_sub_1: 'You have room for improvement. We recommend you widen your knowledge by practice.',
+            r_sub_2: 'We wish you productive trading!',
+            r_sub_3: '',
+        },
+        {
+            id: 3,
+            headerText: 'Excellent',
+            r_sub_1: 'When calculating, you feel at home. Transform your knowledge into income!',
+            r_sub_2: 'We wish you productive trading!',
+            r_sub_3: '',
         },
     ],
     currentSurveyItem: 0,
