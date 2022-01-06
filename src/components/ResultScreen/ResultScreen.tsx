@@ -1,14 +1,22 @@
 import React from 'react';
 import css from './ResultScreen.module.scss'
 import {LikeButton} from "../LikeButton/LikeButton";
-import resultLogoImg from '../../assets/img/729205330_2.png'
-import {useSelector} from "react-redux";
-import {rootReducerType} from "../../store/store";
-import {InitialStateType} from "../../store/surveyReducer";
 
-export const ResultScreen = () => {
-    const state = useSelector<rootReducerType, InitialStateType>(state => state.survey)
 
+type ResultScreenPropsType = {
+    userResult:number
+    questionQty: number
+    headerText: string
+    r_sub_1:string
+    r_sub_2:string
+    r_sub_3:string
+    imgPath:string
+}
+
+
+export const ResultScreen = (props: ResultScreenPropsType) => {
+
+    const {userResult, questionQty, headerText, r_sub_1, r_sub_2, r_sub_3, imgPath} = props
 
 
     return (
@@ -19,13 +27,11 @@ export const ResultScreen = () => {
 
             <article className={css.left_box_text}>
                 <h1 className={css.result_header_text}>
-                    {state.correctAnswerCount}/{state.surveyQuestions.length} Not bad
+                    {userResult}/{questionQty} {headerText}
                 </h1>
-                <p className={css.text_level_1}>The result is not very high, but you can easily improve it — read
-                    our articles and practice.
-                </p>
-                <p className={css.text_level_2}>We wish you productive trading!</p>
-                <p className={css.text_level_3}>We wish you productive trading!</p>
+                <p className={css.text_level_1}>{r_sub_1}</p>
+                <p className={css.text_level_2}>{r_sub_2}</p>
+                <p className={css.text_level_3}>{r_sub_3}</p>
             </article>
 
             <div className={css.like_wrapper}>
@@ -35,12 +41,12 @@ export const ResultScreen = () => {
         </div>
 
         <figure className={css.right_box}>
-            <img src={resultLogoImg} className={css.img} alt='Result Image'/>
+            <img src={imgPath} className={css.img} alt='Result Image'/>
 
         </figure>
 
 
-    </section> >
+    </section>
 )
 
 };

@@ -1,6 +1,6 @@
 import React from 'react'
 import css from './StartScreen.module.scss'
-import startLogoImg from '../../assets/img/729205330_1.png'
+import startLogoImg from '../../assets/img/init_logo.png'
 import {NextButton} from '../NextButton/NextButton'
 import {LikeButton} from '../LikeButton/LikeButton'
 import {useDispatch, useSelector} from "react-redux";

@@ -20,6 +20,7 @@ beforeEach(() => {
                 q_sub_3: ', according to the basic rule of money management?',
                 q_sub_4: '',
                 q_sub_5: '',
+
             }
         ],
         surveyAnswers: [
@@ -35,10 +36,12 @@ beforeEach(() => {
         resultData: [
             {
                 id: 1,
+                expectedResult: 3,
                 headerText: 'Not bad',
                 r_sub_1: 'The result is not very high, but you can easily improve it — read our articles and practice',
                 r_sub_2: 'We wish you productive trading!',
                 r_sub_3: 'We wish you productive trading!',
+                img:'result_1'
             }
             ],
         currentSurveyItem: 0,

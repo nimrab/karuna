@@ -8,11 +8,13 @@ export type InitialStateType = {
 }
 
 type ResultItemType = {
-    id:number
+    id: number
+    expectedResult: number
     headerText: string
     r_sub_1: string
     r_sub_2: string
     r_sub_3: string
+    img: string
 }
 export type SurveyQuestionsItemType = {
     id: number
@@ -202,24 +204,30 @@ const initialState = {
     resultData: [
         {
             id: 1,
+            expectedResult: 3,
             headerText: 'Not bad',
             r_sub_1: 'The result is not very high, but you can easily improve it — read our articles and practice',
             r_sub_2: 'We wish you productive trading!',
             r_sub_3: 'We wish you productive trading!',
+            img: 'result_1'
         },
         {
             id: 2,
+            expectedResult: 6,
             headerText: 'Well done',
             r_sub_1: 'You have room for improvement. We recommend you widen your knowledge by practice.',
             r_sub_2: 'We wish you productive trading!',
             r_sub_3: '',
+            img: 'result_2'
         },
         {
             id: 3,
+            expectedResult: 7,
             headerText: 'Excellent',
             r_sub_1: 'When calculating, you feel at home. Transform your knowledge into income!',
             r_sub_2: 'We wish you productive trading!',
             r_sub_3: '',
+            img: 'result_3'
         },
     ],
     currentSurveyItem: 0,
