@@ -15,9 +15,6 @@ export function App() {
 
     const state = useSelector<rootReducerType, InitialStateType>(state => state.survey)
 
-
-
-
     const currentItemCount = () => {
         if (state.currentSurveyItem === 0) {
             return <StartScreen/>

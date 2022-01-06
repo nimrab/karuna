@@ -1,8 +1,7 @@
 .main_box {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  border: 1px solid #000; }
+  justify-content: space-between; }
   .main_box .left_box {
     margin-top: 120px;
     margin-right: 82px;

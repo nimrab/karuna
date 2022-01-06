@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{KeyboardEvent} from 'react';
 import css from './NextButton.module.scss'
 import arrow_img from '../../assets/img/big_arrow_right.png'
 import arrow_img_disabled from '../../assets/img/arrow_disabled.png'
@@ -13,13 +13,11 @@ type NextButtonPropsType = {
 export const NextButton = (props: NextButtonPropsType) => {
 
 
-
     const width = {width: `${props.width}`}
 
     const onClickHandler = () => {
         props.buttonCallback()
     }
-
 
 
     return (

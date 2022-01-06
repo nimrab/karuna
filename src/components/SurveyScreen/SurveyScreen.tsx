@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {KeyboardEvent, useEffect} from 'react';
 import css from './SurveyScreen.module.scss'
 import {NextButton} from "../NextButton/NextButton";
 import {LikeButton} from "../LikeButton/LikeButton";
@@ -13,6 +13,7 @@ import {
 } from "../../store/surveyReducer";
 import {OptionBox} from "./OptionBox/OptionBox";
 import {HeaderQuestion} from "./HeaderQuestion/HeaderQuestion";
+import {Figure} from "./Figure/Figure";
 
 
 export const SurveyScreen = () => {
@@ -43,17 +44,24 @@ export const SurveyScreen = () => {
 
         }
     }
+/*
+    const onKeyPressHandler = (event: KeyboardEvent) => {
+        if (event.key === 'Enter') {
+            console.log('Enter!')
+        }
+    }
+    useEffect(() => {
+        document.addEventListener('keypress', onKeyPressHandler)
+    },[])
+
+
+*/
 
 
     return (
         <section className={css.survey_box}>
 
-            <figure className={css.survey_css_img}>
-                <div className={css.triangle_top}></div>
-                <div className={css.triangle_middle}></div>
-                <div className={css.triangle_bottom}></div>
-            </figure>
-
+            <Figure figureNumber={state.currentSurveyItem}/>
 
             <span className={css.survey_counter}>{state.currentSurveyItem}/{state.surveyQuestions.length}</span>
 

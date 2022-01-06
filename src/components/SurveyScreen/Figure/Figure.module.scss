@@ -1,0 +1,313 @@
+.survey_css_img_1 {
+  position: absolute;
+  width: 250px;
+  height: 340px;
+  right: -94px;
+  top: -65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(-22.29deg);
+
+  .tree_1 {
+    width: 0;
+    height: 0;
+    border-left: 92px solid transparent;
+    border-right: 92px solid transparent;
+    border-bottom: 132px solid #FFDD3C;
+    margin-bottom: -45px;
+  }
+
+  .tree_2 {
+    width: 0;
+    height: 0;
+    border-left: 106px solid transparent;
+    border-right: 106px solid transparent;
+    border-bottom: 148px solid #FFDD3C;
+    top: 90px;
+    margin-bottom: -70px;
+  }
+
+  .tree_3 {
+    width: 0;
+    height: 0;
+    border-left: 118px solid transparent;
+    border-right: 118px solid transparent;
+    border-bottom: 168px solid #FFDD3C;
+    top: 180px;
+  }
+}
+
+.survey_css_img_2 {
+  position: absolute;
+  width: 284px;
+  height: 284px;
+  right: -135px;
+  top: -80px;
+
+  .snow_1 {
+    width: 284px;
+    height: 23px;
+    background-color: #FFDD3C;
+    margin-top: 125px;
+  }
+
+  .snow_2 {
+    width: 284px;
+    height: 23px;
+    background-color: #FFDD3C;
+    transform: rotate(45deg);
+    margin-top: -25px;
+  }
+
+  .snow_3 {
+    width: 284px;
+    height: 23px;
+    background-color: #FFDD3C;
+    transform: rotate(90deg);
+    margin-top: -15px;
+  }
+
+  .snow_4 {
+    width: 284px;
+    height: 23px;
+    background-color: #FFDD3C;
+    transform: rotate(135deg);
+    margin-top: -35px;
+  }
+}
+
+.survey_css_img_3 {
+  position: absolute;
+  width: 236px;
+  height: 379px;
+  right: -94px;
+  top: -145px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  .toy_1 {
+    width: 11px;
+    height: 116px;
+    background-color: #FFDD3C;
+  }
+
+  .toy_2 {
+    width: 59px;
+    height: 29px;
+    background-color: #FFDD3C;
+    margin-bottom: -9px;
+  }
+
+  .toy_3 {
+    width: 236px;
+    height: 236px;
+    background-color: #FFDD3C;
+    border-radius: 50%;
+  }
+}
+
+.survey_css_img_4 {
+  position: absolute;
+  width: 440px;
+  height: 420px;
+  right: -250px;
+  top: -0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .boot_1 {
+    width: 162px;
+    height: 231px;
+    background-color: #FFDD3C;
+    transform: rotate(16deg);
+  }
+
+  .boot_2 {
+    width: 287px;
+    height: 162px;
+    background-color: #FFDD3C;
+    border-radius: 150px;
+    transform: rotate(-16deg);
+    margin-top: -80px;
+    margin-left: -175px;
+  }
+}
+
+.survey_css_img_5 {
+  position: absolute;
+  width: 236px;
+  height: 420px;
+  right: -119px;
+  top: -92px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(146deg);
+
+  .candy_1 {
+    border-left: 67px solid transparent;
+    border-right: 67px solid transparent;
+    border-top: 124px solid #FFDD3C;
+    margin-bottom: -40px;
+  }
+
+  .candy_2 {
+    background-color: #FFDD3C;
+    width: 154px;
+    height: 234px;
+    border-radius: 34px;
+  }
+
+  .candy_3 {
+    border-left: 67px solid transparent;
+    border-right: 67px solid transparent;
+    border-bottom: 124px solid #FFDD3C;
+    margin-top: -40px;
+  }
+}
+
+.survey_css_img_6 {
+  position: absolute;
+  width: 436px;
+  height: 420px;
+  right: -245px;
+  top: -118px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(-13deg);
+
+  .star_1 {
+    border-left: 174px solid transparent;
+    border-right: 174px solid transparent;
+    border-top: 126px solid #FFDD3C;
+    margin-top: 140px;
+  }
+
+  .star_2 {
+    border-left: 174px solid transparent;
+    border-right: 174px solid transparent;
+    border-top: 126px solid #FFDD3C;
+    transform: rotate(-70deg);
+    margin-top: -125px;
+  }
+
+  .star_3 {
+    border-left: 174px solid transparent;
+    border-right: 174px solid transparent;
+    border-top: 126px solid #FFDD3C;
+    transform: rotate(70deg);
+    margin-top: -130px;
+  }
+}
+
+.survey_css_img_7 {
+  position: absolute;
+  width: 336px;
+  height: 340px;
+  right: -205px;
+  top: -45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(12deg);
+
+  .present_5 {
+    width: 262px;
+    height: 48px;
+    background-color: #FFDD3C;
+    position: relative;
+
+    .present_1 {
+      width: 71px;
+      height: 71px;
+      background-color: #FFDD3C;
+      border-radius: 50%;
+      position: absolute;
+      /* outline: 1px solid black;*/
+      top: -69px;
+      right: 152px;
+    }
+
+    .present_2 {
+      border-left: 36px solid transparent;
+      border-right: 36px solid transparent;
+      border-top: 68px solid #FFDD3C;
+      transform: rotate(-62deg);
+      position: absolute;
+      /*  outline: 1px solid black;*/
+      top: -46px;
+      right: 114px;
+    }
+
+    .present_3 {
+      border-left: 36px solid transparent;
+      border-right: 36px solid transparent;
+      border-top: 68px solid #FFDD3C;
+      transform: rotate(-55deg);
+      position: absolute;
+      top: -46px;
+      right: 55px;
+    }
+
+    .present_4 {
+      width: 71px;
+      height: 71px;
+      background-color: #FFDD3C;
+      border-radius: 50%;
+      position: absolute;
+      top: -70px;
+      right: 38px;
+    }
+  }
+
+  .present_6 {
+    width: 243px;
+    height: 164px;
+    background-color: #FFDD3C;
+  }
+}
+
+.survey_css_img_8 {
+  position: absolute;
+  width: 300px;
+  height: 440px;
+  right: -180px;
+  top: -110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(23deg);
+
+  .glove_1 {
+    width: 199px;
+    height: 62px;
+    background-color: #FFDD3C;
+  }
+
+  .glove_2 {
+    width: 177px;
+    height: 284px;
+    border-radius: 0 0 88px 88px;
+    background-color: #FFDD3C;
+    margin-top: -40px;
+    position: relative;
+
+    .glove_3 {
+      position: absolute;
+      width: 101px;
+      height: 65px;
+      background-color: #FFDD3C;
+      border-radius: 32px 0 0 32px;
+      transform: rotate(-35deg);
+      left: -72px;
+      top: 85px;
+    }
+  }
+}

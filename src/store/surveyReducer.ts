@@ -222,7 +222,7 @@ const initialState = {
         },
         {
             id: 3,
-            expectedResult: 7,
+            expectedResult: 8,
             headerText: 'Excellent',
             r_sub_1: 'When calculating, you feel at home. Transform your knowledge into income!',
             r_sub_2: 'We wish you productive trading!',
