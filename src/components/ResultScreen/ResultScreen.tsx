@@ -41,8 +41,7 @@ export const ResultScreen = (props: ResultScreenPropsType) => {
         </div>
 
         <figure className={css.right_box}>
-            <img src={imgPath} className={css.img} alt='Result Image'/>
-
+            <img src={imgPath} className={css.img} alt='ResultImage'/>
         </figure>
 
 

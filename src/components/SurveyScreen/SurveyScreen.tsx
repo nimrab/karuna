@@ -1,11 +1,12 @@
-import React, {KeyboardEvent, useEffect} from 'react';
+import React from 'react';
 import css from './SurveyScreen.module.scss'
 import {NextButton} from "../NextButton/NextButton";
 import {LikeButton} from "../LikeButton/LikeButton";
 import {useDispatch, useSelector} from "react-redux";
 import {rootReducerType} from "../../store/store";
 import {
-    AnswerItemType, changeCorrectAnswerCount,
+    AnswerItemType,
+    changeCorrectAnswerCount,
     changeIsChosenAnswer,
     changeSurveyItem,
     InitialStateType,
@@ -44,19 +45,6 @@ export const SurveyScreen = () => {
 
         }
     }
-/*
-    const onKeyPressHandler = (event: KeyboardEvent) => {
-        if (event.key === 'Enter') {
-            console.log('Enter!')
-        }
-    }
-    useEffect(() => {
-        document.addEventListener('keypress', onKeyPressHandler)
-    },[])
-
-
-*/
-
 
     return (
         <section className={css.survey_box}>

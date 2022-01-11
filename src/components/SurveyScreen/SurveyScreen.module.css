@@ -1,12 +1,12 @@
 .survey_box {
   margin-top: 120px;
   margin-left: 48px;
-  width: 864px;
+  max-width: 864px;
   position: relative; }
   .survey_box .survey_counter {
     font-weight: 500;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 1.5;
     color: #2A2B30; }
   .survey_box .choose_option_box {
     margin-top: 52px;
