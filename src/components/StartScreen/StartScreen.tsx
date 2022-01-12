@@ -45,7 +45,7 @@ export const StartScreen = () => {
             </section>
 
             <figure className={css.right_box}>
-                <img src={startLogoImg} className={css.img} alt='Logo Image'/>
+                <img src={startLogoImg} className={css.img} alt='LogoImage'/>
             </figure>
 
         </section>

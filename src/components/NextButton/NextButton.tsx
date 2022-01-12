@@ -1,4 +1,4 @@
-import React,{KeyboardEvent} from 'react';
+import React from 'react';
 import css from './NextButton.module.scss'
 import arrow_img from '../../assets/img/big_arrow_right.png'
 import arrow_img_disabled from '../../assets/img/arrow_disabled.png'
