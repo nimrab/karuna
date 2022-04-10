@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/karuna/static/css/main.e6d4c755.css",
-    "main.js": "/karuna/static/js/main.a5cd4af1.js",
-    "static/js/787.47e05349.chunk.js": "/karuna/static/js/787.47e05349.chunk.js",
-    "static/media/init_logo.png": "/karuna/static/media/init_logo.01f392b4b929c9e9b09b.png",
-    "static/media/result_3.png": "/karuna/static/media/result_3.acf1b7801f84abfb59c6.png",
-    "static/media/result_1.png": "/karuna/static/media/result_1.eaf0180090cc0bc56f07.png",
-    "static/media/result_2.png": "/karuna/static/media/result_2.3bfb09d45bd995c31e7e.png",
-    "index.html": "/karuna/index.html",
-    "main.e6d4c755.css.map": "/karuna/static/css/main.e6d4c755.css.map",
-    "main.a5cd4af1.js.map": "/karuna/static/js/main.a5cd4af1.js.map",
-    "787.47e05349.chunk.js.map": "/karuna/static/js/787.47e05349.chunk.js.map"
+    "main.css": "/survey/static/css/main.57b4ff1d.css",
+    "main.js": "/survey/static/js/main.21638f73.js",
+    "static/js/787.dde1b745.chunk.js": "/survey/static/js/787.dde1b745.chunk.js",
+    "static/media/init_logo.png": "/survey/static/media/init_logo.01f392b4b929c9e9b09b.png",
+    "static/media/result_3.png": "/survey/static/media/result_3.acf1b7801f84abfb59c6.png",
+    "static/media/result_1.png": "/survey/static/media/result_1.eaf0180090cc0bc56f07.png",
+    "static/media/result_2.png": "/survey/static/media/result_2.3bfb09d45bd995c31e7e.png",
+    "index.html": "/survey/index.html",
+    "main.57b4ff1d.css.map": "/survey/static/css/main.57b4ff1d.css.map",
+    "main.21638f73.js.map": "/survey/static/js/main.21638f73.js.map",
+    "787.dde1b745.chunk.js.map": "/survey/static/js/787.dde1b745.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6d4c755.css",
-    "static/js/main.a5cd4af1.js"
+    "static/css/main.57b4ff1d.css",
+    "static/js/main.21638f73.js"
   ]
 }
